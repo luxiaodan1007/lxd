@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>git 命令1</title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<p v-for="item in citys" :key="item.id" :title="item.name"> {{ item.name }} </p>
+			
+			<span v-for="item in num"> {{ item }} </span>
+			
+			<p v-for="value,key,index in obj"> {{ index }}--{{ key }}--{{ value }} </p>
+			
+			
+		</div>
+		<script type="text/javascript">
+			const vm = new Vue({
+				el:"#app",
+				data:{
+					citys:[
+						{id:1,name:"上海"},
+						{id:2,name:"武汉"},
+						{id:3,name:"南京"},
+						{id:4,name:"杭州"},
+					],
+					num:10,
+					obj:{
+						id:101,
+						name:"创造101"
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
